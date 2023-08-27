@@ -1,0 +1,41 @@
+.TransparentButton {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.TransparentButton i {
+  margin-right: 8px;
+}
+.txtColor {
+  color: #2a8ded;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  justify-content: center;
+  margin-right: 1vw;
+}
+.txtColor:hover {
+  box-shadow: 0 4px 8px 0 rgba(172, 165, 165, 0.2);
+}
+
+.bgColor {
+  background-color: #c82814;
+  border-radius: 5px;
+  justify-content: center;
+  background-image: linear-gradient(to left, #8f2112 30%, transparent 0);
+  background-size: 400%;
+  background-position: center;
+  transition: background-position 0.5s ease-in-out;
+}
+
+.bgColor:hover {
+  background-position: right;
+}
