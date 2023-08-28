@@ -89,7 +89,7 @@ export const StartSelling = () => {
 
       <div className={styles["startSelling"]}>
         <div className={styles["heading"]}>
-          <h2> How to start selling at OTOMOTO?</h2>
+          <h2> How to start selling at PERSONALMOTO?</h2>
         </div>
 
         <div className={styles["timeline"]}>
