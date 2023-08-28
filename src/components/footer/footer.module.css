@@ -2,15 +2,12 @@ footer {
   background-color: #121315;
   color: #a7a7a7;
   font-size: 16px;
-  /* position: fixed; */
-  bottom:0;
 }
 footer * {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
   border: none;
   outline: none;
-  
 }
 .row {
   padding: 1em 1em;
@@ -27,7 +24,7 @@ footer * {
   padding: 0 2em;
   min-height: 15em;
 }
-h3 {
+.h3class {
   width: 100%;
   text-align: left;
   color: white;
@@ -51,20 +48,20 @@ ul li a {
 ul li a:hover {
   color: #2a8ded;
 }
-.about p {
+.about .pclass {
   text-align: justify;
   line-height: 2;
   margin: 0;
 }
 input,
-.sub-btn {
+.btn {
   font-size: 1em;
   padding: 1em;
   width: 100%;
   border-radius: 5px;
   margin-bottom: 5px;
 }
-button {
+.btn {
   background-color: rgb(95 186 190);
   color: #ffffff;
 }
@@ -80,24 +77,49 @@ div.social {
 }
 .social i:hover {
   cursor: pointer;
-  transform: scale(1.2);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(1.2); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .copyright {
   padding: 0.3em 1em;
   background-color: #25262e;
 }
+.footer-menu {
+  /* float: left; */
+  margin-top: 10px;
+}
 
+.footer-menu a {
+  color: #cfd2d6;
+  padding: 6px;
+
+  text-decoration: none;
+}
+.footer-menu a:hover {
+  color: #27bcda;
+}
 .copyright p {
   font-size: 0.9em;
-  text-align: center;
+  text-align: right;
 }
 @media screen and (max-width: 850px) {
   .row.primary {
     grid-template-columns: 1fr;
   }
   .row {
-    padding: 1em 0.1em;
+    padding: 1.0em 0.1em; 
+  }
+  .footer-menu {
+    float: none;
+    margin: 10px 0;
+  }
+  
+  .row.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em 0.5em; 
   }
 }

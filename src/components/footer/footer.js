@@ -1,30 +1,26 @@
 import React from "react";
-import "./footer.css";
+import styles from  "./footer.module.css";
 
 export const Footer = () => {
   return (
     <footer>
-      <div class="row primary">
-        <div class="column about">
-          <h3>Foolish Developer</h3>
-
-          <p>
+      <div className={styles.row + " " + styles.primary}>
+        <div className={styles.column + " " + styles.about}>
+          <h3 className={styles.h3class}> Foolish Developer</h3>
+          <p className={styles.pclass}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
             voluptatem corporis error non,
           </p>
-
-          <div class="social">
+          <div className={styles.social}>
             <i className="fi fi-brands-facebook"></i>
             <i className="fi fi-brands-instagram"></i>
-            <i class="fi fi-brands-twitter"></i>
-            <i class="fi fi-brands-youtube"></i>
-            <i class="fi fi-brands-whatsapp"></i>
+            <i className={styles["fi-brands-twitter"]}></i>
+            <i className={styles["fi-brands-youtube"]}></i>
+            <i className={styles["fi-brands-whatsapp"]}></i>
           </div>
         </div>
-
-        <div class="column links">
-          <h3>Some Links</h3>
-
+        <div className={styles.column + " " + styles.links}>
+          <h3 className={styles.h3class}>Some Links</h3>
           <ul>
             <li>
               <a href="#faq">F.A.Q</a>
@@ -40,9 +36,8 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-
-        <div class="column links">
-          <h3>Some Links</h3>
+        <div className={styles.column + " " + styles.links}>
+          <h3 className={styles.h3class}>Some Links</h3>
           <ul>
             <li>
               <a href="#faq">F.A.Q</a>
@@ -58,18 +53,23 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-
-        <div class="column subscribe">
-          <h3>Newsletter</h3>
+        <div className={styles.column + " " + styles.subscribe}>
+          <h3 className={styles.h3class}>Newsletter</h3>
           <div>
             <input type="email" placeholder="Your email id here" />
-            <button className="sub-btn">Subscribe</button>
+            <button className={styles.btn}>Subscribe</button>
           </div>
         </div>
       </div>
-
-      <div class="copyright">
-        <p>Copyright &copy; 2021 Foolish Developer</p>
+      <div className={styles.row + " " + styles.copyright}>
+        <div className={styles["footer-menu"]}>
+          <a href="1">Home</a>
+          <a href="2">About</a>
+          <a href="3">Contact</a>
+          <a href="4">Blog</a>
+          <a href="5">Social</a>
+        </div>
+        <p className={styles.pclass}>Copyright &copy; 2021 Foolish Developer</p>
       </div>
     </footer>
   );

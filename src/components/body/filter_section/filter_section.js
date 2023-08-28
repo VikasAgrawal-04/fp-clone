@@ -11,12 +11,15 @@ export const FilterSection = () => {
    
 
   const filterItems = [
-    { name: "Cars", iconClass: "fi fi-rr-car" },
-    { name: "Bikes", iconClass: "fi fi-rr-motorcycle" },
-    { name: "Trucks", iconClass: "fi fi-rs-truck-side" },
+    { name: "Cars", iconClass: "fi fi-rr-car",backgroundImg: "./images/car-background.jpg" },
+    { name: "Bikes", iconClass: "fi fi-rr-motorcycle" ,backgroundImg: "./images/bike-background.jpg"},
+    { name: "Trucks", iconClass: "fi fi-rs-truck-side",backgroundImg: "./images/truck-background.jpg" },
   ];
+
+
+
   const [activeFilter, setActiveFilter] = useState("Cars");
-  
+  const [backgroundImage, setBackgroundImage] = useState(filterItems.find(item => item.name === activeFilter).backgroundImg);
   const getCorrectFilter = (activeFilter) => {
     switch (activeFilter) {
       case "Cars":
@@ -34,12 +37,19 @@ export const FilterSection = () => {
     }
   };
 
+  const handleClick=(tab)=>{
+    setActiveFilter(tab.name);
+    setBackgroundImage(tab.backgroundImg);
+  }
+
+
   return (
    
    
       <div className="filter-section" style={{
-        backgroundImage : "url('https://wallpaperaccess.com/full/1752458.jpg')",
+        backgroundImage : `url(${backgroundImage})`, 
         backgroundSize: 'cover',
+        backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',}}>
           <div className="filter-container">
             <div className="filter">
@@ -50,8 +60,8 @@ export const FilterSection = () => {
                     className={`clickable-div ${
                       activeFilter === tab.name ? "clicked" : ""
                     }`}
-                    onClick={() => setActiveFilter(tab.name)}
-                  >
+                    onClick={() => handleClick(tab)}
+                    >
                     <i className={tab.iconClass}></i>
                     <span className="div-text">{tab.name}</span>
                   </div>

@@ -236,43 +236,43 @@ export const SliderSection = () => {
   const cars = [
     {
       imgUrl:
-        "https://images.unsplash.com/photo-1578749516922-3e1641cac71f",
+        "./images/car1.jpg",
       title: "Audi R8",
       description: "Audi R8 is a powerful and luxurious sports car.",
     },
     {
       imgUrl:
-        "https://images.unsplash.com/photo-1531743406-ace4d17d1b7c",
+        "./images/car4.jpg",
       title: "Ferrari 458",
       description: "Ferrari 458 is an iconic Italian supercar.",
     },
     {
       imgUrl:
-        "https://images.unsplash.com/photo-1565611157-329bfc0b2df3",
+        "./images/car3.jpg",
       title: "Lamborghini Huracan",
       description: "Lamborghini Huracan is a masterpiece of engineering and design.",
     },
     {
       imgUrl:
-        "https://images.unsplash.com/photo-1592194996292-ynjt5IXgAs0",
+        "./images/car2.jpg",
       title: "Porsche 911",
       description: "Porsche 911 is a classic sports car known for its performance.",
     },
     {
         imgUrl:
-          "https://images.unsplash.com/photo-1592194996292-ynjt5IXgAs0",
+          "./images/car1.jpg",
         title: "Porsche 911",
         description: "Porsche 911 is a classic sports car known for its performance.",
       },
       {
         imgUrl:
-          "https://images.unsplash.com/photo-1592194996292-ynjt5IXgAs0",
+          "./images/car2.jpg",
         title: "Porsche 911",
         description: "Porsche 911 is a classic sports car known for its performance.",
       },
       {
         imgUrl:
-          "https://images.unsplash.com/photo-1592194996292-ynjt5IXgAs0",
+          "./images/car3.jpg",
         title: "Porsche 911",
         description: "Porsche 911 is a classic sports car known for its performance.",
       },
@@ -296,7 +296,10 @@ export const SliderSection = () => {
   };
 
   return (
+    <> <div className="heading"><h1> Featured Offers</h1></div>
+    
     <div className="slider">
+      
       <div className="slider-left">
         <Slider {...sliderSettings}>
           {cars.map((car, index) => (
@@ -321,6 +324,7 @@ export const SliderSection = () => {
         </Slider>
       </div>
       <div className="slider-right"></div>
-    </div>
+    </div></>
+    
   );
 };
