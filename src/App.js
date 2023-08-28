@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<DashBoard />} />
         <Route path="/detail" element={<Detail />} />
         <Route path="/signin-up" element={<SignInUp/>} />
-        <Route path="/startselling" element={<StartSelling />} />
+        <Route path="/selling" element={<StartSelling />} />
       </Routes>
     </Router>
   );

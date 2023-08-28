@@ -42,15 +42,22 @@ export const Header = () => {
         unmountOnExit
       >
         <nav className="Nav">
-          <TransBtn text={"Home"} onClick={()=>navigate('/')}/>
+          <TransBtn text={"Home"} onClick={() => navigate("/")} />
           <TransBtn text={"Articles"} />
           <TransBtn iconClass={"fi fi-rr-heart"} text={"Wishlist"} />
           <TransBtn
             iconClass={"fi fi-rs-user"}
             text={"Log in | Register"}
-            onClick={() => navigate('/signin-up')}
+            onClick={() => navigate("/signin-up")}
           />
-          <a href="/startselling"><button  className="start-selling">+ Start Selling</button></a>
+          <a>
+            <button
+              className="start-selling"
+              onClick={() => navigate("/selling")}
+            >
+              + Start Selling
+            </button>
+          </a>
         </nav>
       </CSSTransition>
       <button className="Burger" onClick={toggleNav}>
