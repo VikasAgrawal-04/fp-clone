@@ -1,3 +1,10 @@
 .cur-pointer {
   cursor: pointer;
 }
+
+.center{
+  display: grid;
+  place-items: center;
+  background: #000;
+  height: 100vh;
+}

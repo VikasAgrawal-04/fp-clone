@@ -9,6 +9,7 @@ import { AiFillCamera } from "react-icons/ai";
 import { FaAdversal } from "react-icons/fa";
 import { Header } from "../../components/header/header";
 import { Footer } from "../../components/footer/footer";
+import { useNavigate } from "react-router-dom";
 
 const cardData = [
   {
@@ -67,6 +68,7 @@ const answers = [
 
 export const StartSelling = () => {
   const CardsPerPage = 3;
+  const navigate = useNavigate();
 
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -76,6 +78,8 @@ export const StartSelling = () => {
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
   };
+
+  const handleAddVehicleClick = () => navigate('/add-vehicle');
 
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -90,6 +94,15 @@ export const StartSelling = () => {
       <div className={styles["startSelling"]}>
         <div className={styles["heading"]}>
           <h2> How to start selling at PERSONALMOTO?</h2>
+        </div>
+
+        <div className={styles["add-vehicle-btn-container"]}>
+          <button
+            className={styles["add-vehicle-btn"]}
+            onClick={handleAddVehicleClick}
+          >
+            Add Vehicle
+          </button>
         </div>
 
         <div className={styles["timeline"]}>
@@ -112,6 +125,7 @@ export const StartSelling = () => {
           <div
             className={`${styles["container"]} ${styles["right-container"]}`}
           >
+
             <BsSpeedometer className={styles["icon"]} />
             <div className={styles["text-box"]}>
               <h2> Save vehicle mileage</h2>
@@ -207,17 +221,15 @@ export const StartSelling = () => {
             <div className={styles["pagination"]}>
               <button
                 onClick={() => handlePageChange(1)}
-                className={`${styles["pgbtn"]}  ${
-                  currentPage === 1 ? `${styles["active"]}` : `${styles[""]}`
-                } `}
+                className={`${styles["pgbtn"]}  ${currentPage === 1 ? `${styles["active"]}` : `${styles[""]}`
+                  } `}
               >
                 1
               </button>
               <button
                 onClick={() => handlePageChange(2)}
-                className={`${styles["pgbtn"]}   ${
-                  currentPage === 2 ? `${styles["active"]}` : `${styles[""]}`
-                }`}
+                className={`${styles["pgbtn"]}   ${currentPage === 2 ? `${styles["active"]}` : `${styles[""]}`
+                  }`}
               >
                 2
               </button>
@@ -243,11 +255,10 @@ export const StartSelling = () => {
                 {questions.map((question, index) => (
                   <div
                     key={index}
-                    className={`${styles["question-answer__accordion"]} ${
-                      activeIndex === index
-                        ? `${styles["active"]}`
-                        : `${styles[""]}`
-                    }`}
+                    className={`${styles["question-answer__accordion"]} ${activeIndex === index
+                      ? `${styles["active"]}`
+                      : `${styles[""]}`
+                      }`}
                     onClick={() => handleQuestionClick(index)}
                   >
                     <div className={styles["question"]}>

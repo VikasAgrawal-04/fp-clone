@@ -1,0 +1,97 @@
+.page {
+    height: 100vh;
+}
+
+.form {
+    margin: 8rem auto;
+    width: 85%;
+    padding-bottom: 4rem;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+    margin-top: 2rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+    color: gray;
+    margin-top: 2rem;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+.dropdowns p {
+    font-size: 1.1rem;
+}
+
+.add-photos-container>p {
+    font-size: 1.1rem;
+    color: gray;
+    margin-top: 2rem;
+}
+
+.add-photos-container {
+    background: #EBECEF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+    margin: 2rem 0;
+}
+
+.add-photos-btn {
+    background-color: #0071CE;
+    color: white;
+    font-size: 20px;
+    padding: 5px 30px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}
+
+.single-select-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.single-select-btn {
+    background: white;
+    width: 20rem;
+    text-align: left;
+
+    padding: 0.5rem 1rem;
+    border: 1px solid gray;
+}
+
+.single-select-btn:last-child {
+    margin-left: 1rem;
+}
+
+.dropdowns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.checkbox-blue-container {
+    margin-top: 2rem;
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid blue;
+    background-color: #ECF5FE;
+    border-radius: 5px
+}

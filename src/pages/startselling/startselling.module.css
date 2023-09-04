@@ -269,6 +269,23 @@ background-color: white;
     animation: moveline 6s linear forwards;
 }
 
+.add-vehicle-btn-container{
+  width: '100%'; 
+  display: grid; 
+  place-items: center;
+  margin-top: 2rem;
+}
+
+.add-vehicle-btn {
+  background-color: #0071CE;
+  color: white;
+  font-size: 20px;
+  padding: 5px 30px;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}
+
 @keyframes moveline{
     0%{
         height: 0;
